@@ -4,5 +4,5 @@ import "fmt"
 
 func main() {
 	const myLocalConst = "679085"
-	fmt.Printf("Моя первая константа %s!", myLocalConst)
+	fmt.Printf("Моя первая локальная константа %s!", myLocalConst)
 }
