@@ -2,15 +2,13 @@ package main
 
 import "fmt"
 
-func main() {
-	var f func() string
-	f = func() string {
+func hello() func() string {
+	return func() string {
 		return "Hello, GO!"
 	}
-
-	hello(f)
 }
 
-func hello(v func() string) {
-	fmt.Println(v())
+func main() {
+	f := hello()
+	fmt.Println(f())
 }
