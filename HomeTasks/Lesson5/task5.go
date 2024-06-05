@@ -6,10 +6,10 @@ func main() {
 	var d int
 	d = 50
 	fmt.Println(d)
-	fmt.Println(pr(d))
+	fmt.Println(change(d))
 }
 
-func pr(a int) int {
+func change(a int) int {
 	var b *int
 	b = &a
 	*b = 100
