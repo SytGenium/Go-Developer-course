@@ -5,7 +5,6 @@ import "fmt"
 func main() {
 	recurs(23, 0, 1)
 }
-
 func recurs(a int, b int, c int) {
 	a--
 	fmt.Println(b)
