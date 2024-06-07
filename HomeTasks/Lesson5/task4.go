@@ -2,10 +2,10 @@ package main
 
 import "fmt"
 
-var a int
-var b int
-var c int
-var d int
+var a float32
+var b float32
+var c float32
+var d float32
 
 func main() {
 	pr(a)
@@ -14,6 +14,6 @@ func main() {
 	pr(d)
 }
 
-func pr(a int) {
+func pr(a float32) {
 	fmt.Println(a, &a)
 }
