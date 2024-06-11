@@ -19,25 +19,23 @@ type employee struct {
 	contact
 }
 
-	U1 := contract{
-		ID:     1,
-		Name: "Юзер1",
-		Date:   "2024-01-31",
-		contact: contact{
-			adress: "Орел",
-			phone: "9045674",
-			}
-		}
-E1 := contract{
-ID:     1,
-Name: "Юзер1",
-Date:   "2024-01-31",
-contact: contact{
-adress: "Орел",
-phone: "9045674",
+var u = user{
+	ID:   1,
+	Name: "Юзер1",
+	contact: contact{
+		adress: "Орел",
+		phone:  "9045674",
+	},
 }
+var e = employee{
+	ID:   1,
+	Name: "Шеф1",
+	contact: contact{
+		adress: "Москва",
+		phone:  "982098208024",
+	},
 }
 
 func main() {
-	fmt.Printf("Договор № %s от %s", W.Number, W.Date)
+	fmt.Println(u.contact.adress, u.contact.phone, e.contact.adress, e.contact.phone)
 }
