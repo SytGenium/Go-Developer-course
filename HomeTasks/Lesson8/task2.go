@@ -1,17 +1,24 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
+
+var animals = [3]string{"слон", "бегемот", "осьминог"}
+var s1 = map[string]int{"слон": 3, "бегемот": 0, "носорог": 5, "лев": 1}
 
 func main() {
-	animals := [3]string{"слон", "бегемот", "осьминог"}
-	s1 := map[string]int{"слон": 3, "бегемот": 0, "носорог": 5, "лев": 1}
+	f := 2
+	vwvod(f)
+}
 
-	m, ok := s1[animals[0]]
-	fmt.Printf(":Животное: %s, количество: %d (есть в карте: %v)", animals[0], m, ok)
+func vwvod(a int) {
+	if a < 0 {
+		return
+	}
+	m, ok := s1[animals[a]]
+	fmt.Printf(":Животное: %s, количество: %d (есть в карте: %v)", animals[a], m, ok)
 	fmt.Println()
-	m1, ok := s1[animals[1]]
-	fmt.Printf(":Животное: %s, количество: %d (есть в карте: %v)", animals[1], m1, ok)
-	fmt.Println()
-	m2, ok := s1[animals[2]]
-	fmt.Printf(":Животное: %s, количество: %d (есть в карте: %v)", animals[2], m2, ok)
+	a--
+	vwvod(a)
 }
